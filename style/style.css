@@ -2,3 +2,44 @@
     font-family: "Poppins", sans-serif;
     
   }
+  .primary-bg{
+    background-color: #F4F7FF;
+  }
+  body{
+    background-color: #F4F7FF;
+  }
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 8px;
+}
+  
+.div1 {
+  grid-column: span 6 / span 6;
+  grid-row: span 2 / span 2;
+}
+
+.div5 {
+  grid-column: span 6 / span 6;
+  grid-row: span 3 / span 3;
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.div6 {
+  grid-column: span 6 / span 6;
+  grid-row: span 3 / span 3;
+  grid-column-start: 1;
+  grid-row-start: 6;
+}
+
+.div7 {
+  grid-column: span 2 / span 2;
+  grid-row: span 8 / span 8;
+  grid-column-start: 7;
+  grid-row-start: 1;
+}
+      
