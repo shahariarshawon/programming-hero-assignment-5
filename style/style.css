@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  gap: 8px;
+  gap: 36px;
 }
   
 .div1 {
@@ -42,4 +42,7 @@
   grid-column-start: 7;
   grid-row-start: 1;
 }
-      
+button{
+  color:white;
+}
+
