@@ -30,7 +30,7 @@
                 <div class="flex items-center gap-6">
                   <div class="flex items-center gap-3 primary-bg p-3 rounded-[32px]">
                     <img src="assets/checkbox.png" alt="">
-                    <h2 class="text-3xl font-bold">23</h2>
+                    <h2 id="navCounter" class="text-3xl font-bold">23</h2>
                   </div>
                   <button id="themeChangerButton" class="btn btn-link"><img class=" " src="assets/themebtnfull.png" alt=""></button>
                 </div>
@@ -50,11 +50,11 @@
         <img class="bg-white p-3 rounded-full" src="assets/checkbox.png" alt="">
         <div>
           <p class="text-lg">Task Assigned</p>
-          <h2 class="font-bold text-3xl">05</h2>
+          <h2  class="font-bold text-3xl">0<span id="taskAssignCounter">6</span></h2>
         </div>
        </div>
         <!-- discover something part -->
-        <div class="flex items-center link no-underline gap-5 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] via-[#6C7FFA] rounded-xl py-6 pl-16 pr-28 ">
+        <div id="discoverSomethingNewButton" class="flex items-center link no-underline gap-5 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] via-[#6C7FFA] rounded-xl py-6 pl-16 pr-28 ">
           <div>
             <img src="assets/board.png" alt="">
           </div>
@@ -68,9 +68,9 @@
           <div class="bg-white p-4 rounded-full">
             <img src="assets/calender.png" alt="">
           </div>
-          <div class="text-xl">
-            <p>JUlY</p>
-            <p class="font-semibold">date/date/date</p>
+          <div  class="text-xl">
+            <p id="weekName">JUlY</p>
+            <p id="mainDate" class="font-semibold">date/date/date</p>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
       <!-- 1st task 1st part -->
       <div>
         <h2 class="bg-white p-4 rounded-lg max-w-fit">ShopEase</h2>
-        <h2 class="my-4 text-2xl font-medium">Fix Mobile Button Issue</h2>
+        <h2 class="my-4 text-2xl font-medium taskName">Fix Mobile Button Issue</h2>
         <p class="bg-white p-4 whitespace-nowrap  w-[310px] mb-2 overflow-hidden text-ellipsis h-24 text-[#666] rounded-lg ">Debug using Chrome <br>DevTools, check for overlapping elements, and ensure onClick works properly
           and ensure onClick works properly</p>
       </div>
@@ -93,7 +93,7 @@
           <p>Deadline</p>
           <h3 class="font-medium">21 March 2025</h3>
         </div>
-        <button class="btn btn-primary">Completed</button>
+        <button class="taskCompleteButton btn btn-primary border-none">Complete</button>
       </div>
     </div>
 
@@ -102,7 +102,7 @@
       <!-- 2nd task 1st part -->
       <div>
         <h2 class="bg-white p-4 rounded-lg max-w-fit">CloudSync</h2>
-        <h2 class="my-4 text-2xl font-medium">Add Dark Mode</h2>
+        <h2 class="my-4 text-2xl font-medium taskName">Add Dark Mode</h2>
         <p class="bg-white p-4 whitespace-nowrap  w-[310px] mb-2 overflow-hidden text-ellipsis h-24 text-[#666] rounded-lg ">Store the user's preference in <br>localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
       </div>
       <!-- 2nd task 2nd part -->
@@ -111,7 +111,7 @@
           <p>Deadline</p>
           <h3 class="font-medium">21 March 2025</h3>
         </div>
-        <button class="btn btn-primary">Completed</button>
+        <button class="taskCompleteButton btn btn-primary border-none">Complete</button>
       </div>
     </div>
 
@@ -121,7 +121,7 @@
       <!-- 3rd task 1st part -->
       <div>
         <h2 class="bg-white p-4 rounded-lg max-w-fit">SwiftPay</h2>
-        <h2 class="my-4 text-2xl font-medium">Optimize Home Page</h2>
+        <h2 class="my-4 text-2xl font-medium taskName">Optimize Home Page</h2>
         <p class="bg-white p-4 whitespace-nowrap  w-[310px] mb-2 overflow-hidden text-ellipsis h-24 text-[#666] rounded-lg ">Debug using Chrome <br>DevTools, check for overlapping elements, and ensure onClick works properly
           and ensure onClick works properly</p>
       </div>
@@ -131,7 +131,7 @@
           <p>Deadline</p>
           <h3 class="font-medium">21 March 2025</h3>
         </div>
-        <button class="btn btn-primary">Completed</button>
+        <button class="btn btn-primary taskCompleteButton border-none">Complete</button>
       </div>
     </div>
 
@@ -144,7 +144,7 @@
       <!-- 4th task 1st part -->
       <div>
         <h2 class="bg-white p-4 rounded-lg max-w-fit">Meta</h2>
-        <h2 class="my-4 text-2xl font-medium">Add new emoji 🤲</h2>
+        <h2 class="taskName my-4 text-2xl font-medium">Add New Emoji 🤲</h2>
         <p class="bg-white p-4 whitespace-nowrap  w-[310px] mb-2 overflow-hidden text-ellipsis h-24 text-[#666] rounded-lg ">Debug using Chrome <br>DevTools, check for overlapping elements, and ensure onClick works properly
           and ensure onClick works properly</p>
       </div>
@@ -154,7 +154,7 @@
           <p>Deadline</p>
           <h3 class="font-medium">21 March 2025</h3>
         </div>
-        <button class="btn btn-primary">Completed</button>
+        <button class="taskCompleteButton btn btn-primary border-none">Complete</button>
       </div>
     </div>
 
@@ -163,7 +163,7 @@
       <!-- 5th task 1st part -->
       <div>
         <h2 class="bg-white p-4 rounded-lg max-w-fit">Google LLC</h2>
-        <h2 class="my-4 text-2xl font-medium">Integrate OpenAI API</h2>
+        <h2 class="taskName my-4 text-2xl font-medium">Integrate OpenAI API</h2>
         <p class="bg-white p-4 whitespace-nowrap  w-[310px] mb-2 overflow-hidden text-ellipsis h-24 text-[#666] rounded-lg ">Debug using Chrome <br>DevTools, check for overlapping elements, and ensure onClick works properly
           and ensure onClick works properly</p>
       </div>
@@ -173,7 +173,7 @@
           <p>Deadline</p>
           <h3 class="font-medium">21 March 2025</h3>
         </div>
-        <button class="btn btn-primary">Completed</button>
+        <button class="taskCompleteButton btn btn-primary border-none">Complete</button>
       </div>
     </div>
 
@@ -183,7 +183,7 @@
       <!-- 6th task 1st part -->
       <div>
         <h2 class="bg-white p-4 rounded-lg max-w-fit">Glassdoor</h2>
-        <h2 class="my-4 text-2xl font-medium">Improve Job Searching</h2>
+        <h2 class="taskName my-4 text-2xl font-medium">Improve Job Searching</h2>
         <p class="bg-white p-4 whitespace-nowrap  w-[310px] mb-2 overflow-hidden text-ellipsis h-24 text-[#666] rounded-lg ">Debug using Chrome <br>DevTools, check for overlapping elements, and ensure onClick works properly
           and ensure onClick works properly</p>
       </div>
@@ -193,7 +193,7 @@
           <p>Deadline</p>
           <h3 class="font-medium">21 March 2025</h3>
         </div>
-        <button class="btn btn-primary">Completed</button>
+        <button class="taskCompleteButton btn btn-primary border-none">Complete</button>
       </div>
     </div>
 
@@ -207,11 +207,13 @@
         <img src="assets/activity.png" alt="">
         <h2 class="text-xl">Activity Log</h2>
       </div>
-      <button class="btn btn-primary mt-4 text-lg">Clear History</button>
+      <button id="clearHistoryButton" class="btn btn-primary mt-4 text-lg">Clear History</button>
     </div>
 
     <!-- record div -->
-    <div class="border-t-2 pt-3 border-[#dddfe9] border-dashed my-6">
+    <div id="historyRecordDiv" class="border-t-2 pt-3 border-[#dddfe9] border-dashed my-6">
+
+      
 
     </div>
 
@@ -223,5 +225,9 @@
     </main>
 
  <script src="script/randomThemeChange.js"></script>
+ <script src="script/taskComplete.js"></script>
+ <script src="script/navDate.js"></script>
+ <script src="script/discoverSomething1.js"></script>
+ <script src="script/discoverSomething2.js"></script>
 </body>
 </html>
